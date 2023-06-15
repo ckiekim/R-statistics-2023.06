@@ -39,3 +39,4 @@ if (t > ll && t < ul) {
 ### R의 t.test 함수 이용
 t.test(smp, mu=1220)    # p-value: 0.5가 0.05보다 크므로 귀무가설 채택
 t.test(smp2, mu=1220)   # p-value: 0.004가 0.05보다 작으므로 귀무가설 기각
+
