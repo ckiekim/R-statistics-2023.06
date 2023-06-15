@@ -24,3 +24,16 @@ line.col = ifelse(ll * ul > 0, 'red', 'black')
 arrows(1:length(x), ll, 1:length(x), ul, code=3,
        angle=90, length=0.02, col=line.col, lwd=1.5)
 
+
+##### 모분산을 모를때 모평균에 대한 95% 신뢰구간
+smp = c(520, 498, 481, 512, 515, 542, 520, 518, 527, 526)
+len = length(smp)
+xbar = mean(smp)
+s = sd(smp)
+t = qt(1 - 0.05/2, df=len-1)
+ll = xbar - t * s / sqrt(len)
+ul = xbar + t * s / sqrt(len)
+print(paste('신뢰수준:', '95%'))
+print(paste('하한:', round(ll,4)))
+print(paste('평균:', round(xbar,4)))
+print(paste('상한:', round(ul,4)))     
