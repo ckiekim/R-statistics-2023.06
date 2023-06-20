@@ -13,6 +13,10 @@ hf.son = hf.son[c('Father','Height')] * 2.54
 out = lm(Height ~ Father, data=hf.son)
 summary(out)
 
+### 회귀선
+plot(Height ~ Father, data=hf.son)
+abline(out$coefficients)
+
 ### 좋은 선형 모델
 # 정규성 - 두번째 그림, 대각선상에 점이 몰려 있을 것
 # 독립성
